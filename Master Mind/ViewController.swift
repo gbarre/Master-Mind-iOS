@@ -49,11 +49,6 @@ class ViewController: UIViewController {
         targetLine.C3.setTitle(target.element3.rawValue, for: .normal)
         targetLine.C4.setTitle(target.element4.rawValue, for: .normal)
         
-        setBtnColor(targetLine.C1)
-        setBtnColor(targetLine.C2)
-        setBtnColor(targetLine.C3)
-        setBtnColor(targetLine.C4)
-        
         hideTarget(true)
         
         attemptId = 0
@@ -226,6 +221,11 @@ class ViewController: UIViewController {
     }
     
     func hideTarget(_ action: Bool) {
+        setBtnColor(targetLine.C1)
+        setBtnColor(targetLine.C2)
+        setBtnColor(targetLine.C3)
+        setBtnColor(targetLine.C4)
+        
         targetLine.C1.isHidden = action
         targetLine.C2.isHidden = action
         targetLine.C3.isHidden = action
