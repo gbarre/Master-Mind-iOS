@@ -13,6 +13,10 @@
 		F067ABE223F5932500CDF830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F067ABE023F5932500CDF830 /* Main.storyboard */; };
 		F067ABE423F5932700CDF830 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F067ABE323F5932700CDF830 /* Assets.xcassets */; };
 		F067ABE723F5932700CDF830 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F067ABE523F5932700CDF830 /* LaunchScreen.storyboard */; };
+		F067ABEF23F5999700CDF830 /* StackLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067ABEE23F5999700CDF830 /* StackLine.swift */; };
+		F067ABF123F5B54C00CDF830 /* PopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067ABF023F5B54C00CDF830 /* PopView.swift */; };
+		F067ABF323F5B6B400CDF830 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067ABF223F5B6B400CDF830 /* Line.swift */; };
+		F067ABF523F6B7CF00CDF830 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067ABF423F6B7CF00CDF830 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		F067ABE323F5932700CDF830 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F067ABE623F5932700CDF830 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F067ABE823F5932700CDF830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F067ABEE23F5999700CDF830 /* StackLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackLine.swift; sourceTree = "<group>"; };
+		F067ABF023F5B54C00CDF830 /* PopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopView.swift; sourceTree = "<group>"; };
+		F067ABF223F5B6B400CDF830 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		F067ABF423F6B7CF00CDF830 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,11 @@
 				F067ABDA23F5932500CDF830 /* AppDelegate.swift */,
 				F067ABDC23F5932500CDF830 /* SceneDelegate.swift */,
 				F067ABDE23F5932500CDF830 /* ViewController.swift */,
+				F067ABF423F6B7CF00CDF830 /* Constants.swift */,
+				F067ABF223F5B6B400CDF830 /* Line.swift */,
 				F067ABE023F5932500CDF830 /* Main.storyboard */,
+				F067ABF023F5B54C00CDF830 /* PopView.swift */,
+				F067ABEE23F5999700CDF830 /* StackLine.swift */,
 				F067ABE323F5932700CDF830 /* Assets.xcassets */,
 				F067ABE523F5932700CDF830 /* LaunchScreen.storyboard */,
 				F067ABE823F5932700CDF830 /* Info.plist */,
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F067ABF123F5B54C00CDF830 /* PopView.swift in Sources */,
+				F067ABEF23F5999700CDF830 /* StackLine.swift in Sources */,
 				F067ABDF23F5932500CDF830 /* ViewController.swift in Sources */,
+				F067ABF323F5B6B400CDF830 /* Line.swift in Sources */,
+				F067ABF523F6B7CF00CDF830 /* Constants.swift in Sources */,
 				F067ABDB23F5932500CDF830 /* AppDelegate.swift in Sources */,
 				F067ABDD23F5932500CDF830 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,14 +300,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J255M5NX8P;
 				INFOPLIST_FILE = "Master Mind/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.jrmv.games.Master-Mind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,14 +321,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J255M5NX8P;
 				INFOPLIST_FILE = "Master Mind/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.jrmv.games.Master-Mind";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,514 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Master_Mind" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7th-RH-GIW">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4KH-KT-2f1" userLabel="Target" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1p-qb-5e5">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJX-gP-Mf6">
+                                                <rect key="frame" x="66" y="0.0" width="0.0" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zug-To-3gm">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-vG-sGp">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-Gm-1mD">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-Ai-oWb">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="Zug-To-3gm" id="6Nb-NM-HNu"/>
+                                            <outlet property="C2" destination="EVW-vG-sGp" id="gzT-lj-oFI"/>
+                                            <outlet property="C3" destination="RhE-Gm-1mD" id="OIP-6z-T0j"/>
+                                            <outlet property="C4" destination="jWE-Ai-oWb" id="W0W-q1-90W"/>
+                                            <outlet property="Check" destination="YJX-gP-Mf6" id="fZW-NC-JOh"/>
+                                            <outlet property="infos" destination="J1p-qb-5e5" id="tzy-Fn-nED"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vK1-uO-JuK" userLabel="Attempt 10" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="73.5" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsq-sK-DFr">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7n-KG-Jev">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEw-mF-P5p">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQ8-HL-2E9">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-YW-Ec4">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDc-9N-9ZW">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="DEw-mF-P5p" id="Ubl-rd-5Vy"/>
+                                            <outlet property="C2" destination="TQ8-HL-2E9" id="aIe-eu-sb1"/>
+                                            <outlet property="C3" destination="ESh-YW-Ec4" id="TPU-lC-C2e"/>
+                                            <outlet property="C4" destination="HDc-9N-9ZW" id="juD-EI-9GQ"/>
+                                            <outlet property="Check" destination="F7n-KG-Jev" id="nJW-O6-clb"/>
+                                            <outlet property="infos" destination="Qsq-sK-DFr" id="Qqr-Va-9nb"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-Xc-UlT" userLabel="Attempt 9" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="147" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JV-0n-Twd">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UB3-59-A7Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnj-wR-QmG">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y2-dh-R8y">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGZ-as-am8">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5B-ie-YKi">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="Jnj-wR-QmG" id="a9N-VS-8Ha"/>
+                                            <outlet property="C2" destination="7Y2-dh-R8y" id="YgB-YI-ZYZ"/>
+                                            <outlet property="C3" destination="mGZ-as-am8" id="K73-Zg-fvf"/>
+                                            <outlet property="C4" destination="Y5B-ie-YKi" id="D8K-y6-6bO"/>
+                                            <outlet property="Check" destination="UB3-59-A7Z" id="9Kp-Ai-lw8"/>
+                                            <outlet property="infos" destination="3JV-0n-Twd" id="tsI-Dz-zxw"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8ru-rX-5xt" userLabel="Attempt 8" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="220.5" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmc-iA-sFV">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jch-Qg-gJJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hve-SZ-IrO">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM8-s2-s8O">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjw-5f-XMX">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22s-VN-ITr">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="hve-SZ-IrO" id="U8I-or-mAA"/>
+                                            <outlet property="C2" destination="RM8-s2-s8O" id="sFa-Ut-m5A"/>
+                                            <outlet property="C3" destination="Wjw-5f-XMX" id="bpd-ti-svU"/>
+                                            <outlet property="C4" destination="22s-VN-ITr" id="Qpq-IC-rYg"/>
+                                            <outlet property="Check" destination="jch-Qg-gJJ" id="OdO-Vn-JqL"/>
+                                            <outlet property="infos" destination="gmc-iA-sFV" id="HIv-5N-W5Y"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hGB-nI-dzA" userLabel="Attempt 7" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="294" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvI-Ag-YLB">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWJ-dj-hjR">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUh-Xd-bzV">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvg-hi-4qe">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1if-kc-Aoi">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5M4-II-2EO">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="jUh-Xd-bzV" id="OOt-iw-S25"/>
+                                            <outlet property="C2" destination="Dvg-hi-4qe" id="csz-Mr-3z4"/>
+                                            <outlet property="C3" destination="1if-kc-Aoi" id="vOj-kD-r6V"/>
+                                            <outlet property="C4" destination="5M4-II-2EO" id="zmE-oJ-Xwq"/>
+                                            <outlet property="Check" destination="zWJ-dj-hjR" id="jFW-69-wyu"/>
+                                            <outlet property="infos" destination="dvI-Ag-YLB" id="ghp-Bq-a9H"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-NU-UFd" userLabel="Attempt 6" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="367.5" width="374" height="43"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uik-Za-2uZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3P-3V-HGx">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7e-BW-8Kq">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzd-Rd-lOh">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t08-Ra-frm">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-3E-cRW">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="i7e-BW-8Kq" id="IQT-kj-in9"/>
+                                            <outlet property="C2" destination="dzd-Rd-lOh" id="gDr-eQ-hku"/>
+                                            <outlet property="C3" destination="t08-Ra-frm" id="d1E-fE-d4R"/>
+                                            <outlet property="C4" destination="5Gs-3E-cRW" id="8Yj-cJ-Sn1"/>
+                                            <outlet property="Check" destination="A3P-3V-HGx" id="Ifz-K3-opX"/>
+                                            <outlet property="infos" destination="uik-Za-2uZ" id="dCa-AI-v16"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-1M-a6U" userLabel="Attempt 5" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="440.5" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX0-8x-1oU">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fy-oY-ji9">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJl-aK-t1w">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO3-20-gnT">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x3-Yt-aed">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-Qd-aDS">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="EJl-aK-t1w" id="o1J-KK-Roi"/>
+                                            <outlet property="C2" destination="VO3-20-gnT" id="Fnc-dZ-Yx9"/>
+                                            <outlet property="C3" destination="3x3-Yt-aed" id="2vV-to-W6r"/>
+                                            <outlet property="C4" destination="BMa-Qd-aDS" id="5fC-C7-1wH"/>
+                                            <outlet property="Check" destination="7fy-oY-ji9" id="08c-ni-j2I"/>
+                                            <outlet property="infos" destination="aX0-8x-1oU" id="UGP-dk-raj"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8xu-OQ-rGb" userLabel="Attempt 4" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="514" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCA-eF-g1d">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="md2-yC-4hx">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xm-zt-5dq">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZM-cj-2i8">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeL-Nw-YUi">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-76-lzi">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="4Xm-zt-5dq" id="S4c-xy-NHM"/>
+                                            <outlet property="C2" destination="zZM-cj-2i8" id="KsQ-2p-Xtg"/>
+                                            <outlet property="C3" destination="oeL-Nw-YUi" id="IA2-Ub-Hox"/>
+                                            <outlet property="C4" destination="GbS-76-lzi" id="EeV-3k-8e5"/>
+                                            <outlet property="Check" destination="md2-yC-4hx" id="BlB-cz-Jj5"/>
+                                            <outlet property="infos" destination="tCA-eF-g1d" id="LVz-2y-54y"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lfz-En-LuK" userLabel="Attempt 3" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="587.5" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-VB-p7X">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh9-Qc-3Cw">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnm-WZ-1nz">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAe-RL-iso">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lck-Xm-6Tc">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKr-9g-jvL">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="Tnm-WZ-1nz" id="MfE-VR-1Pe"/>
+                                            <outlet property="C2" destination="TAe-RL-iso" id="HzX-XF-YOn"/>
+                                            <outlet property="C3" destination="lck-Xm-6Tc" id="Qe0-Ab-1xv"/>
+                                            <outlet property="C4" destination="wKr-9g-jvL" id="k8w-Un-lRL"/>
+                                            <outlet property="Check" destination="zh9-Qc-3Cw" id="c26-6y-b2a"/>
+                                            <outlet property="infos" destination="bAh-VB-p7X" id="ubw-bt-qre"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HDP-hH-hNS" userLabel="Attempt 2" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="661" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLK-VR-DWG">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZU5-Wo-p9s">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-KE-B0t">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-GU-gXb">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrp-gc-N3T">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEw-sF-M7t">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="CSz-KE-B0t" id="LX8-eK-6Ul"/>
+                                            <outlet property="C2" destination="3Vb-GU-gXb" id="nue-E0-L75"/>
+                                            <outlet property="C3" destination="xrp-gc-N3T" id="MZ0-qa-XJj"/>
+                                            <outlet property="C4" destination="qEw-sF-M7t" id="yBv-ei-YMp"/>
+                                            <outlet property="Check" destination="ZU5-Wo-p9s" id="PRF-Xw-ebK"/>
+                                            <outlet property="infos" destination="oLK-VR-DWG" id="0xt-JN-JQB"/>
+                                        </connections>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="z8x-DA-5Ca" userLabel="Attempt 1" customClass="StackLine" customModule="Master_Mind" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="734.5" width="374" height="43.5"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQx-sp-Cko">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="43.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aww-N0-JJy">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="Check"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wej-k6-fNK">
+                                                <rect key="frame" x="81" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C1"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qL-fz-Ytn">
+                                                <rect key="frame" x="161.5" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C2"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akN-Qz-XmO">
+                                                <rect key="frame" x="242.5" y="0.0" width="50.5" height="43.5"/>
+                                                <state key="normal" title="C3"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv5-YO-O1c">
+                                                <rect key="frame" x="323" y="0.0" width="51" height="43.5"/>
+                                                <state key="normal" title="C4"/>
+                                            </button>
+                                        </subviews>
+                                        <connections>
+                                            <outlet property="C1" destination="wej-k6-fNK" id="8dO-Sw-YGs"/>
+                                            <outlet property="C2" destination="6qL-fz-Ytn" id="aJW-lh-0Vh"/>
+                                            <outlet property="C3" destination="akN-Qz-XmO" id="peX-23-Q07"/>
+                                            <outlet property="C4" destination="Iv5-YO-O1c" id="yuD-Ek-GgT"/>
+                                            <outlet property="Check" destination="aww-N0-JJy" id="CQ1-bW-tAa"/>
+                                            <outlet property="infos" destination="eQx-sp-Cko" id="ixd-jk-EgO"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7th-RH-GIW" secondAttribute="trailing" constant="20" id="5FK-mT-JHO"/>
+                            <constraint firstItem="7th-RH-GIW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="I7P-e6-ZSD"/>
+                            <constraint firstItem="7th-RH-GIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KlW-7u-Cu4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7th-RH-GIW" secondAttribute="bottom" constant="20" id="NsO-FV-b4R"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Attempt1" destination="z8x-DA-5Ca" id="6oX-zy-xsp"/>
+                        <outlet property="Attempt10" destination="vK1-uO-JuK" id="yav-ec-AII"/>
+                        <outlet property="Attempt2" destination="HDP-hH-hNS" id="LHT-eQ-CPX"/>
+                        <outlet property="Attempt3" destination="lfz-En-LuK" id="2o4-UB-mVQ"/>
+                        <outlet property="Attempt4" destination="8xu-OQ-rGb" id="4EN-fn-kNk"/>
+                        <outlet property="Attempt5" destination="jgW-1M-a6U" id="wqN-dj-ki9"/>
+                        <outlet property="Attempt6" destination="BmA-NU-UFd" id="Et8-I5-QCK"/>
+                        <outlet property="Attempt7" destination="hGB-nI-dzA" id="KrZ-10-Rr7"/>
+                        <outlet property="Attempt8" destination="8ru-rX-5xt" id="4qM-gd-kyq"/>
+                        <outlet property="Attempt9" destination="vW9-Xc-UlT" id="Y1b-tM-h70"/>
+                        <outlet property="targetLine" destination="4KH-KT-2f1" id="PAN-bZ-Tzb"/>
+                        <segue destination="zmb-5I-LdO" kind="presentation" identifier="pop" id="S3Y-PQ-2Qh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133" y="125"/>
+        </scene>
+        <!--Pop View-->
+        <scene sceneID="b4Z-5Z-wgz">
+            <objects>
+                <viewController modalPresentationStyle="formSheet" id="zmb-5I-LdO" customClass="PopView" customModule="Master_Mind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sWU-iT-hXl">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-Ar-rrx">
+                                <rect key="frame" x="20" y="20" width="260" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-Ve-NWR">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zJN-Fb-Q0i">
+                                        <rect key="frame" x="0.0" y="70" width="260" height="40"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Aoj-Ar-rrx" firstAttribute="leading" secondItem="sWU-iT-hXl" secondAttribute="leading" constant="20" id="DuL-q0-i1A"/>
+                            <constraint firstAttribute="trailing" secondItem="Aoj-Ar-rrx" secondAttribute="trailing" constant="20" id="RGz-4F-chm"/>
+                            <constraint firstItem="Aoj-Ar-rrx" firstAttribute="top" secondItem="sWU-iT-hXl" secondAttribute="top" constant="20" id="pzh-Dm-HQ8"/>
+                            <constraint firstItem="l8h-8d-a1i" firstAttribute="bottom" secondItem="Aoj-Ar-rrx" secondAttribute="bottom" constant="20" id="szG-0e-Xdn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l8h-8d-a1i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bgd-G3-i9w"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="150"/>
+                    <size key="freeformSize" width="300" height="150"/>
+                    <connections>
+                        <outlet property="Stack1" destination="3TA-Ve-NWR" id="FOK-hA-066"/>
+                        <outlet property="Stack2" destination="zJN-Fb-Q0i" id="pzK-St-UYY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBn-0r-XhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="126"/>
         </scene>
     </scenes>
 </document>
